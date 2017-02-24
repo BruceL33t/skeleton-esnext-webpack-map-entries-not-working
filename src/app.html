@@ -1,0 +1,18 @@
+<template>
+  <require from="./grouped-sort"></require>
+  <table>
+    <template repeat.for="[group, items] of myArray2 | groupedSort">
+      <tr>
+        <td>
+          ${group}
+        </td>
+      </tr>
+      <tr repeat.for="item of items">
+        <td>
+          ${item.name}
+        </td>
+        </tr>
+    </template>
+  </table>
+  <a click.delegate="clickMe()">click me</a>
+</template>
